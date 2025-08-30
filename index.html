@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .boxes{
+         margin: 0;
+        height: 100vh; 
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        gap: 20px;
+            
+            
+        }
+        .box {
+            width: 200px;
+            padding: 18px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+            border-radius: 8px;
+            background-color: grey;
+            text-align: center;
+        }
+        .box#grey{
+            background-color: grey;
+        }
+        .box#red {
+            background-color: red;
+        }
+        .box#black {
+            background-color: black;
+        }
+        .box#green {
+            background-color: green;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <span class="box" id="grey">hi</span>
+      <span class="box" id="black">hi</span>
+      <span class="box" id="red">hi</span>
+      <span class="box" id="green">hi</span>
+    </div>
+
+    <script>
+        const buttons= document.querySelectorAll('.box')
+        const body = document.querySelector('body')
+
+        buttons.forEach(function(button){
+            button.addEventListener('click' , function (e){
+                body.style.backgroundColor=e.target.id;
+                
+                
+            });
+        });
+    </script>
+  </body>
+</html>

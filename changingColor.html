@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Changing background colour every 2 seconds</h1>
+    <div class="btn">
+      <button id="btn1">start</button>
+      <button id="btn2">stop</button>
+    </div>
+
+    <script>
+  // Generate the random colors
+  let randomColor = function () {
+    const hex = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += hex[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+  let setinterval;
+  const changingColor = function () {
+    setinterval = setInterval(changecolour,2000);
+    
+    const changecolour= function(){
+        document.body.style.backgroundColor = randomColor();
+    }
+    
+  };
+
+  const stopColor = function () {
+   
+  };
+
+  
+  document.getElementById("btn1").addEventListener("click", changingColor);
+  document.getElementById("btn2").addEventListener("click", stopColor);
+</script>
+
+  </body>
+</html>
