@@ -1,0 +1,1 @@
+A folder where the practiced and learned JS code is saved for the learning and revision purpose in future .
